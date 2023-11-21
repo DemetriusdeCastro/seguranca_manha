@@ -33,6 +33,7 @@ $queryselect = mysqli_query($conexao, $select);
 		<?php } ?>
 		</table>
 		</form>
+		<a href="principal.php">Voltar</a>
 	</center>
 </body>
 </html>

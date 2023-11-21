@@ -7,9 +7,15 @@ include('validaradmin.php');
 
 $cpf = isset($_POST['cpf']) ? $_POST['cpf'] : '';
 $nivel = isset($_POST['nivel']) ? $_POST['nivel'] : '';
+$telefone = isset($_POST['telefone']) ? $_POST['telefone'] : '';
 
-$update = "UPDATE login SET nivel = '$nivel' WHERE cpf = '$cpf'";
-$query = mysqli_query($conexao, $update);
+if($nivel <> 0) {
+	$updatelogin = "UPDATE login SET nivel = '$nivel' WHERE cpf = '$cpf'";
+	$querylogin = mysqli_query($conexao, $updatelogin);
+}
+
+$updateusuario = "UPDATE usuario SET telefone = '$telefone' WHERE cpf = '$cpf'";
+$queryusuario = mysqli_query($conexao, $updateusuario);
 
 header('Location: chamausuario.php?cod='.$cpf);
 
