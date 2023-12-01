@@ -63,7 +63,7 @@ $dados = json_decode($url);
 			}
 		?>
 		<br>
-		<a href="pesquisar_cnpj.php">Voltar</a>
+		<a href="principal.php">Voltar</a>
 	</center>
 </body>
 </html>
